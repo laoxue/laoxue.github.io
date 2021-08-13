@@ -1,7 +1,7 @@
 ---
 layout: es5
 title: ES6(ECMA2016)
-date: 2021-08-13 11:36:34
+date: 2017-06-09 13:47:34
 tags:
     - javascript
 categoroes:

@@ -1,6 +1,6 @@
 ---
 title: '聊聊JS动画库:Velocity.js'
-date: 2021-08-13 11:37:31
+date: 2017-08-25 08:37:31
 tags:
     - javascript
 categoroes:

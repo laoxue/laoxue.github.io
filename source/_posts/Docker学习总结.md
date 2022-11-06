@@ -8,7 +8,7 @@ categoroes:
 keywords: "Docker学习总结||Docker||教学"
 description: 
 top_img:
-cover: http://wooyun.icu/docker-hub-breach.png
+cover: https://dali-saymore-public.oss-cn-shanghai.aliyuncs.com/docker.webp
 ---
 ###### **前言:**
 

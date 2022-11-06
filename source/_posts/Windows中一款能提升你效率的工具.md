@@ -8,7 +8,7 @@ categoroes:
 keywords: "window效率工具||windows软件"
 description: 
 top_img:
-cover: http://upload-images.jianshu.io/upload_images/3612487-b287dcb4e6b430b0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
+cover: https://dali-saymore-public.oss-cn-shanghai.aliyuncs.com/wox.png
 
 ---
 

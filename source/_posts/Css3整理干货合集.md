@@ -8,7 +8,7 @@ categoroes:
 keywords: "Css3整理干货合集||CSS||教学"
 description: 
 top_img:
-cover: http://upload-images.jianshu.io/upload_images/3612487-2a72179c9ccffc6f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
+cover: https://dali-saymore-public.oss-cn-shanghai.aliyuncs.com/css3.jpeg
 ---
 
 ###### **前言:** 

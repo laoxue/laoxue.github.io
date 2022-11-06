@@ -8,7 +8,7 @@ categoroes:
 keywords: "LESS与SASS的区别||LESS||SASS"
 description: 
 top_img:
-cover: http://img0.imgtn.bdimg.com/it/u=861104756,4244471114&fm=26&gp=0.jpg
+cover: https://dali-saymore-public.oss-cn-shanghai.aliyuncs.com/lessvssass.jpg
 ---
 
 ![](http://img0.imgtn.bdimg.com/it/u=861104756,4244471114&fm=26&gp=0.jpg)

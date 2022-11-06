@@ -8,7 +8,7 @@ categoroes:
 keywords: "速学Gulp（前端自动化工具）||gulp||教学"
 description: 
 top_img:
-cover: https://bs-uploads.toptal.io/blackfish-uploads/blog/post/seo/og_image_file/og_image/15409/0820-an-introduction-to-automation-with-gulp-Waldek_Social-f4d913f00bb7819cd315d99b95eb2765.png
+cover: https://dali-saymore-public.oss-cn-shanghai.aliyuncs.com/gulp.jpg 
 ---
 
 ![](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497834217&di=d35221240a49828e2fb34e28f153abf6&imgtype=jpg&er=1&src=http%3A%2F%2Fimages2015.cnblogs.com%2Fblog%2F968549%2F201607%2F968549-20160711235626529-1718382852.png)

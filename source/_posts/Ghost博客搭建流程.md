@@ -8,7 +8,7 @@ categoroes:
 keywords: "如何搭建自己的博客||博客搭建"
 description: 
 top_img:
-cover: http://wooyun.icu/ghost-alternatives.png
+cover:  https://dali-saymore-public.oss-cn-shanghai.aliyuncs.com/ghost.png
 ---
 
 ### 测试内容

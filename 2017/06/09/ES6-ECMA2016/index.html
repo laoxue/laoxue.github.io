@@ -1,0 +1,312 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ES6(ECMA2016) | laoxue's blog</title><meta name="keywords" content="ES6(ECMA2016)||JavaScript"><meta name="author" content="laoxue"><meta name="copyright" content="laoxue"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言 　首先说下什么是ECMAscript ，ECMAscript是Javascript的标准，也就是他的规格。Javascript是脚本语言，所以ECMAscript就是规定了Javascript如何去更好的去运行脚本语言。  　ECMAscript 从最初开始发布过很多个版本，ES6因为是2015年发布，所以也叫ECMAscript2015. 记录本篇文章的想法是巩固ES5的内容，并且学习E">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6(ECMA2016)">
+<meta property="og:url" content="http://laoxue.github.io/2017/06/09/ES6-ECMA2016/index.html">
+<meta property="og:site_name" content="laoxue&#39;s blog">
+<meta property="og:description" content="前言 　首先说下什么是ECMAscript ，ECMAscript是Javascript的标准，也就是他的规格。Javascript是脚本语言，所以ECMAscript就是规定了Javascript如何去更好的去运行脚本语言。  　ECMAscript 从最初开始发布过很多个版本，ES6因为是2015年发布，所以也叫ECMAscript2015. 记录本篇文章的想法是巩固ES5的内容，并且学习E">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blog.jscrambler.com/content/images/2017/07/quick-introduction-to-es6-modules.png">
+<meta property="article:published_time" content="2017-06-09T13:47:34.000Z">
+<meta property="article:modified_time" content="2022-11-08T06:37:38.397Z">
+<meta property="article:author" content="laoxue">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.jscrambler.com/content/images/2017/07/quick-introduction-to-es6-modules.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://laoxue.github.io/2017/06/09/ES6-ECMA2016/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script async="async"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: '',
+  enable_page_level_ads: 'true'
+});</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'ES6(ECMA2016)',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: undefined,
+  isToc: true,
+  postUpdate: '2022-11-08 06:37:38'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://upload.jianshu.io/users/upload_avatars/3612487/2dec3011-77f2-4c32-8ce1-cf47b470b750.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://blog.jscrambler.com/content/images/2017/07/quick-introduction-to-es6-modules.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">laoxue's blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">ES6(ECMA2016)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2017-06-09T13:47:34.000Z" title="发表于 2017-06-09 13:47:34">2017-06-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-08T06:37:38.397Z" title="更新于 2022-11-08 06:37:38">2022-11-08</time></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497007302343&di=2c3a60a86cb9ec749ffd3cc197f7ff16&imgtype=0&src=http://ww1.sinaimg.cn/large/8c81192fjw1eoi8dzns49j20go0dpta5.jpg"></p>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>　首先说下什么是ECMAscript ，ECMAscript是Javascript的标准，也就是他的规格。<br>Javascript是脚本语言，所以ECMAscript就是规定了Javascript如何去更好的去运行脚本语言。</p>
+</blockquote>
+<p>　ECMAscript 从最初开始发布过很多个版本，ES6因为是2015年发布，所以也叫ECMAscript2015. 记录本篇文章的想法是巩固ES5的内容，并且学习ES6的新特性。下面开始学习吧！</p>
+<h4 id="ES5"><a href="#ES5" class="headerlink" title="ES5"></a>ES5</h4><p>　ES5 多半是扩展原生对象的功能，主要扩展了 <strong>Object</strong>， <strong>Array</strong>， <strong>Function</strong> 等对象功能，并且加入了 <strong>strict mode</strong> 严格模式(即是 在使用前输入 use strict 就会进入严格模式 对后方代码书写进行严格控制，不规范就会报错)，和JSON.parse等功能。</p>
+<p>　ES5的大部分特性 在ie9+ 都得到支持所以都可实现在JavaScript。</p>
+<h5 id="Objest"><a href="#Objest" class="headerlink" title="Objest"></a>Objest</h5><p>传入参数o必须是object类型，如果不是则会抛出异常</p>
+<pre><code>Object.getPrototypeOf(o) //获取o的prototype对象，等价于以前的o.__proto__ 
+Object.getOwnPropertyDescriptor(o,p) //获取对象描述，和Object.defineProperty相关方法 
+Object.getOwnPropertyNames(o) //获取自由属性名列表，结果列表将不包含原型链上的属性
+Object.create(o,p) //以o为prototype创建新的对象并返回，如果对象描述p存在 就是用刚刚定义创建的对象
+Object.defineProperty(o,p,attrs) //根据规则attrs定义对象o上，属性名为p的属性
+Object.defineProperties(o,props) //根据对象描述props来定义对象o，通常props包含多个属性的定义
+Object.seal(o) //一个对象在默认状态下，
+    extensible: 可以添加新的属性
+    configurable: 可以修改已有属性的特性
+    Object.seal会改变这两个特性，既不能扩展新属性，也不能修改已有属性的特性。
+Object.freeze(o) //将对象的每个自有自有属性(own property)做如下操作：
+    属性的writable特性置为false
+    属性的configurable特性置为false
+    同时，该对象将不可扩展。可见，该方法比Object.seal更加严格的限制了对一个对象的未来改动。
+Object.preventExtensions(o) //将对象置为不可扩展
+Object.isSealed(o) //判断一个对象是否sealed：
+    对象的每个自有属性：如果属性的configurable特性为true，则返回false
+    如果对象为extensible的，那么返回false
+    不满足以上两个条件，则返回true
+Object.isFrozen(o) //
+    对每个自有属性，如果该属性的configurable或writable特性为true，则返回false
+    如果对象为extensible的，那么返回false
+    不满足以上两个条件，则返回true
+Object.isExtensible(o) //判对一个对象是否可扩展
+Object.keys(o) //返回对象o的所有可枚举(enumerable)属性的名称
+Object.prototype.isPrototypeOf(v) //检查对象是否是位于给定对象v的原型链上
+Object.prototype.propertyIsEnumerable(p) //检查一个对象上的属性p是否可枚举
+</code></pre>
+<h5 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h5><pre><code>Array.isArray(a) //判断a是否为为真正的Array
+Array.prototype.indexOf(e,i) //使用“严格等”来判断元素e在数组中的索引号。一个可选的搜索起点i
+Array.prototype.lastIndexOf(e,i) //获取元素e在数组中最后出现的位置。起始位置i为可选
+Array.prototype.every(t,c) //测试数组中的每个元素都满足测试t。之后介绍的所有数组遍历方法，都支持一个可选的上下文对象c，可以灵活设置回调函数的执行上下文。传递给数组的测试函数、遍历函数通常有如下签名：
+    function(item, index, array) &#123;&#125;
+Array.prototype.some(t,c) //测试数组中是否有元素满足测试t
+Array.prototype.forEach(f,c) //使用函数f遍历每个数组的元素
+Array.prototype.map(f,c) // 使用函数f修改每个数组的每个元素。按顺序收集f的每个返回值，并返回这个新组成的数组
+Array.prototype.filter(f,c) //收集通过函数测试f的书组元素
+Array.prototype.reduce(r,v) //从左向右，使用函数r聚集数组的每个元素。可以可选的制定一个初始值v
+Array.prototype.reduceRight(r,v) //Array.prototype.reduce的从右向左的版本 
+</code></pre>
+<h5 id="String"><a href="#String" class="headerlink" title="String"></a>String</h5><pre><code>String.prototpye.trim //去掉字符串两头的空白符和换行符
+字符订阅:
+    //property access on strings
+    &quot;abc&quot;[2] === &quot;b&quot;
+</code></pre>
+<h5 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h5><pre><code>Function.prototype.bind(thisTarget, arg1,...argn) //为了指定当前函数的上下文对象和运行参数，该函数创建一个新的函数，保留给定的this对象和运行参数
+</code></pre>
+<h5 id="Json"><a href="#Json" class="headerlink" title="Json"></a>Json</h5><pre><code>JSON.parse(text) //根据rfc4627标准解析JSON文本
+JSON.stringify(obj) //将指定的对象obj序列化为JSON文本
+</code></pre>
+<h5 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h5><pre><code>Date.now //获取当前时间距1970.1.1 00:00:00的毫秒数
+Date.prototype.toISOString //根据ISO8601生成时间字符串
+    (new Date).toISOString()
+    &#39;2014-04-02T08:31:53.049Z&#39;
+</code></pre>
+<h4 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h4><p>　复习完ES5，下面我们来学习ES6吧，ES6加入了很多新特性，但是ES6还没有完全可以在JavaScript中直接书写，我们可以用Babel来把你书写的ES6转换为ES5。所以我们先来讲下Babel</p>
+<p>Babel:一个广泛使用的ES6转码器，可以将ES6代码转为ES5代码.</p>
+<pre><code>//首先在你的项目根目录下 配置文件.babelrc 用来设置转码规则和插件
+    &#123;
+        &quot;presets&quot;:[],
+        &quot;plugin&quot;:[]
+    &#125;
+字段设定转码规则 需要根据自己的需求进行安装 
+npm install --save-dev 转码规则
+//安装命令行转码工具 babel-cli 用于命令行转换。
+npm install --global babel-cli 
+</code></pre>
+<p>使用方法:</p>
+<pre><code>babel xxx.js  //标准输出
+babel xxx.js  --out-file（或者-o） xxx.js //指定输出文件
+babel src --out-dir lib（或者-d） 指定输出目录
+babel src -d lib -s //加入-s参数生成source map文件
+注意：在命令行使用babel的时候要确定全局安装babel 或者在根目录下安装项目中如下
+npm install --save-dev babel-cli 
+然后改写package.json 
+&#123;
+// ...
+&quot;devDependencies&quot;:&#123;
+    &quot;babel-cli&quot;: &quot;^6.0.0&quot;&#125;,
+    &quot;scripts&quot;: &#123;
+    &quot;build&quot;: &quot;babel src -d lib&quot;&#125;,
+&#125;
+</code></pre>
+<p>转码的时候执行下面命令即可：</p>
+<pre><code>npm run build
+</code></pre>
+<p>此外还有一些其他相关babel的工具，自行参考。</p>
+<h4 id="ES6新特性"><a href="#ES6新特性" class="headerlink" title="ES6新特性"></a>ES6新特性</h4><h5 id="let-和-const"><a href="#let-和-const" class="headerlink" title="let 和 const"></a>let 和 const</h5><p>ES6新增了let命令 用来声明变量 同var相同 但是作用域却不同，let声明变量为块级作用域</p>
+<pre><code>for(let i=1;i&lt;8;i++)&#123;
+
+&#125;
+console.log(i) // 这里会在控制台提示i找不到 因为let声明的i只作用在函数内部
+</code></pre>
+<ul>
+<li>这样做的好处就是避免了变量提升即在用var 声明一个变量前先调用会提示 undifind 但是用了let后如果在声明前就调用会报错</li>
+<li>避免污染全局变量</li>
+<li>let 不允许在同一个作用域中声明相同变量</li>
+</ul>
+<p>而const也用来声明变量 但是声明的是常量，如果我们声明后再改变const变量就会报错</p>
+<h5 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h5><p>ES6中引入了类的概念，使的Javascript更加规范，成为面向对象变成的语法。</p>
+<pre><code>class Name&#123;
+    //构造方法 constructor  this代表实力对象
+    constructor()&#123;
+        this.name = &#39;tom&#39;
+    &#125;
+    says(say)&#123;
+        console.log(this.name+&#39;is&#39;+say)
+    &#125;
+&#125;
+//创建一个是实例
+let person = new Name()
+person.syas(&#39;hello,world&#39;)
+</code></pre>
+<p>Class 的继承 用extends关键字实现 比如一个 Mingzi类需要继承 Name </p>
+<pre><code>class Mingzi extends Name&#123;
+    constructor()&#123;
+        super()
+        this.type = &#39;girl&#39;
+    &#125;
+&#125;
+</code></pre>
+<p>这里super只带父类的实例，子类必须在constructor方法中调用super 否则会报错 如果不调用super方法 子类就得不到this对象。</p>
+<p>然后我们实例化Mingzi </p>
+<pre><code>let girl = new Mingzi()
+girl.says(&#39;i am a sexy girl&#39;)
+</code></pre>
+<h5 id="箭头函数-arrow-function"><a href="#箭头函数-arrow-function" class="headerlink" title="箭头函数 arrow function"></a>箭头函数 arrow function</h5><pre><code>function(i)&#123;return i*5&#125;  ==  (i) =&gt; i*5
+
+如果函数内内容比较多用&#123;&#125;括起来
+</code></pre>
+<h5 id="template-string"><a href="#template-string" class="headerlink" title="template string"></a>template string</h5><p>这个应用于 如果我们利用js中写好一个html模板 然后再加入html中这个情形，如果之前那种方法会很容易出错，因为会加入很多+和单双引号问题。</p>
+<p>在es6中使用模板字符串 `` 和 ${} 即可</p>
+<pre><code>用反引号`表明起始，用$&#123;&#125;来引用变量
+</code></pre>
+<h5 id="函数默认值"><a href="#函数默认值" class="headerlink" title="函数默认值"></a>函数默认值</h5><pre><code>function names(name = &#39;dali&#39;)&#123;
+    console.log(name)
+&#125;
+names()
+</code></pre>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>　总体来说ES6加入了很多新特性，来方便开发和使js代码更加规范和安全。个人推荐学习ES6后再学习Typescript，这样会更容易些，因为这些新特性在Typescript中都有，在以后的文章中我会再详细介绍 Typescript,”求机若渴，虚心若愚”，不要吝啬你的喜欢，发动小手点一点。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">laoxue</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://laoxue.github.io/2017/06/09/ES6-ECMA2016/">http://laoxue.github.io/2017/06/09/ES6-ECMA2016/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://laoxue.github.io" target="_blank">laoxue's blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/javascript/">javascript</a></div><div class="post_share"><div class="social-share" data-image="https://blog.jscrambler.com/content/images/2017/07/quick-introduction-to-es6-modules.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2017/06/12/%E9%80%9F%E5%AD%A6Gulp%EF%BC%88%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7%EF%BC%89/"><img class="prev-cover" src="https://dali-saymore-public.oss-cn-shanghai.aliyuncs.com/gulp.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">速学Gulp（前端自动化工具）</div></div></a></div><div class="next-post pull-right"><a href="/2017/06/09/Css3%E6%95%B4%E7%90%86%E5%B9%B2%E8%B4%A7%E5%90%88%E9%9B%86/"><img class="next-cover" src="https://dali-saymore-public.oss-cn-shanghai.aliyuncs.com/css3.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Css3整理干货合集</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2017/08/25/聊聊JS动画库-Velocity-js/" title="聊聊JS动画库:Velocity.js"><img class="cover" src="https://www.theengineeringprojects.com/wp-content/uploads/2021/05/what-is-velocity.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2017-08-25</div><div class="title">聊聊JS动画库:Velocity.js</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://upload.jianshu.io/users/upload_avatars/3612487/2dec3011-77f2-4c32-8ce1-cf47b470b750.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">laoxue</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/laoxue" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:daliyouhuashuo@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">不要等待，时机永远不会恰到好处</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ES5"><span class="toc-number">1.1.</span> <span class="toc-text">ES5</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Objest"><span class="toc-number">1.1.1.</span> <span class="toc-text">Objest</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Array"><span class="toc-number">1.1.2.</span> <span class="toc-text">Array</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#String"><span class="toc-number">1.1.3.</span> <span class="toc-text">String</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Function"><span class="toc-number">1.1.4.</span> <span class="toc-text">Function</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Json"><span class="toc-number">1.1.5.</span> <span class="toc-text">Json</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Date"><span class="toc-number">1.1.6.</span> <span class="toc-text">Date</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ES6"><span class="toc-number">1.2.</span> <span class="toc-text">ES6</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ES6%E6%96%B0%E7%89%B9%E6%80%A7"><span class="toc-number">1.3.</span> <span class="toc-text">ES6新特性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#let-%E5%92%8C-const"><span class="toc-number">1.3.1.</span> <span class="toc-text">let 和 const</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Class"><span class="toc-number">1.3.2.</span> <span class="toc-text">Class</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0-arrow-function"><span class="toc-number">1.3.3.</span> <span class="toc-text">箭头函数 arrow function</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#template-string"><span class="toc-number">1.3.4.</span> <span class="toc-text">template string</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E9%BB%98%E8%AE%A4%E5%80%BC"><span class="toc-number">1.3.5.</span> <span class="toc-text">函数默认值</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">2.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/11/08/%E6%B5%8B%E8%AF%95%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F/" title="测试自动化部署是否成功"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="测试自动化部署是否成功"/></a><div class="content"><a class="title" href="/2022/11/08/%E6%B5%8B%E8%AF%95%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F/" title="测试自动化部署是否成功">测试自动化部署是否成功</a><time datetime="2022-11-08T14:36:36.000Z" title="发表于 2022-11-08 14:36:36">2022-11-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/03/20/Windows%E4%B8%AD%E4%B8%80%E6%AC%BE%E8%83%BD%E6%8F%90%E5%8D%87%E4%BD%A0%E6%95%88%E7%8E%87%E7%9A%84%E5%B7%A5%E5%85%B7/" title="Windows中一款能提升你效率的工具"><img src="https://dali-saymore-public.oss-cn-shanghai.aliyuncs.com/wox.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Windows中一款能提升你效率的工具"/></a><div class="content"><a class="title" href="/2019/03/20/Windows%E4%B8%AD%E4%B8%80%E6%AC%BE%E8%83%BD%E6%8F%90%E5%8D%87%E4%BD%A0%E6%95%88%E7%8E%87%E7%9A%84%E5%B7%A5%E5%85%B7/" title="Windows中一款能提升你效率的工具">Windows中一款能提升你效率的工具</a><time datetime="2019-03-20T15:20:39.000Z" title="发表于 2019-03-20 15:20:39">2019-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/08/25/%E8%81%8A%E8%81%8AJS%E5%8A%A8%E7%94%BB%E5%BA%93-Velocity-js/" title="聊聊JS动画库:Velocity.js"><img src="https://www.theengineeringprojects.com/wp-content/uploads/2021/05/what-is-velocity.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="聊聊JS动画库:Velocity.js"/></a><div class="content"><a class="title" href="/2017/08/25/%E8%81%8A%E8%81%8AJS%E5%8A%A8%E7%94%BB%E5%BA%93-Velocity-js/" title="聊聊JS动画库:Velocity.js">聊聊JS动画库:Velocity.js</a><time datetime="2017-08-25T08:37:31.000Z" title="发表于 2017-08-25 08:37:31">2017-08-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/08/15/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/" title="python数据分析入门教学"><img src="https://i.ytimg.com/vi/WwqumCgyq7E/maxresdefault.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python数据分析入门教学"/></a><div class="content"><a class="title" href="/2017/08/15/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/" title="python数据分析入门教学">python数据分析入门教学</a><time datetime="2017-08-15T11:37:13.000Z" title="发表于 2017-08-15 11:37:13">2017-08-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/08/13/git%E4%B8%8Egithub%E7%9A%84%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/" title="git与github的正确使用姿势"><img src="https://edupala.com/wp-content/uploads/2018/05/git.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git与github的正确使用姿势"/></a><div class="content"><a class="title" href="/2017/08/13/git%E4%B8%8Egithub%E7%9A%84%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/" title="git与github的正确使用姿势">git与github的正确使用姿势</a><time datetime="2017-08-13T11:37:48.000Z" title="发表于 2017-08-13 11:37:48">2017-08-13</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By laoxue</div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div></div></body></html>

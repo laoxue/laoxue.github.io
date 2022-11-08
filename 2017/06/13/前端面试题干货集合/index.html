@@ -1,0 +1,288 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>前端面试题干货集合 | laoxue's blog</title><meta name="keywords" content="前端面试题干货集合||面试题||程序员"><meta name="author" content="laoxue"><meta name="copyright" content="laoxue"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前端工程师  前端工程师属于IT技术职业的一种，是近5年发展起来的职业，旧的体系将其定义为Web前端工程师，主要的技术包含：HTML、JavaScript、CSS。但IT技术属于变化比较快的领域，最近发生了很大的变革，新的体系下，前端工程师技术又增加了：nodejs、Hybrid App。前端技术的兴起和网页越来越丰富化，造就了前端的繁荣现象。虽然说入门相比IT其他行业简单，继而造成更多人转行和培">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端面试题干货集合">
+<meta property="og:url" content="http://laoxue.github.io/2017/06/13/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E5%B9%B2%E8%B4%A7%E9%9B%86%E5%90%88/index.html">
+<meta property="og:site_name" content="laoxue&#39;s blog">
+<meta property="og:description" content="前端工程师  前端工程师属于IT技术职业的一种，是近5年发展起来的职业，旧的体系将其定义为Web前端工程师，主要的技术包含：HTML、JavaScript、CSS。但IT技术属于变化比较快的领域，最近发生了很大的变革，新的体系下，前端工程师技术又增加了：nodejs、Hybrid App。前端技术的兴起和网页越来越丰富化，造就了前端的繁荣现象。虽然说入门相比IT其他行业简单，继而造成更多人转行和培">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://res.cloudinary.com/practicaldev/image/fetch/s--fBO0Zf3i--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/q97aza64off758w3wfdo.jpg">
+<meta property="article:published_time" content="2017-06-13T11:37:02.000Z">
+<meta property="article:modified_time" content="2022-11-08T06:37:38.397Z">
+<meta property="article:author" content="laoxue">
+<meta property="article:tag" content="面试题">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://res.cloudinary.com/practicaldev/image/fetch/s--fBO0Zf3i--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/q97aza64off758w3wfdo.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://laoxue.github.io/2017/06/13/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E5%B9%B2%E8%B4%A7%E9%9B%86%E5%90%88/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script async="async"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: '',
+  enable_page_level_ads: 'true'
+});</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '前端面试题干货集合',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: undefined,
+  isToc: true,
+  postUpdate: '2022-11-08 06:37:38'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://upload.jianshu.io/users/upload_avatars/3612487/2dec3011-77f2-4c32-8ce1-cf47b470b750.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://res.cloudinary.com/practicaldev/image/fetch/s--fBO0Zf3i--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/q97aza64off758w3wfdo.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">laoxue's blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">前端面试题干货集合</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2017-06-13T11:37:02.000Z" title="发表于 2017-06-13 11:37:02">2017-06-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-08T06:37:38.397Z" title="更新于 2022-11-08 06:37:38">2022-11-08</time></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="前端工程师"><a href="#前端工程师" class="headerlink" title="前端工程师"></a>前端工程师</h3><p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497333684682&di=297eaee8c46be1faacc8ededff7c595b&imgtype=0&src=http://photocdn.sohu.com/20150831/mp30065012_1441016852077_1_th.jpeg" alt="前端工程师"></p>
+<hr>
+<p><strong>前端工程师</strong>属于IT技术职业的一种，是近5年发展起来的职业，旧的体系将其定义为Web前端工程师，主要的技术包含：<code>HTML</code>、<code>JavaScrip</code>t、<code>CSS</code>。但IT技术属于变化比较快的领域，最近发生了很大的变革，新的体系下，前端工程师技术又增加了：<code>nodejs</code>、<code>Hybrid App</code>。前端技术的兴起和网页越来越丰富化，造就了前端的繁荣现象。虽然说入门相比<code>IT</code>其他行业简单，继而造成更多人转行和培训机构大量成批送出，但是这个职位依旧稀缺中高级人才。</p>
+<p>面试是一个重要的环节，他是公司评判你是否适合和测试你技术的程度的方式，所以如果你想进入到你心仪的公司，那么面试这个环节就不能掉链子，下面是我见到过总结的一些面试题，希望各位前端工程师们能有些许帮助,会定期更新面试题。</p>
+<h4 id="HTML-CSS部分"><a href="#HTML-CSS部分" class="headerlink" title="HTML/CSS部分"></a>HTML/CSS部分</h4><p><strong>1.什么是盒子模型？</strong></p>
+<p>在网页中，一个元素占有空间的大小由几个部分构成，其中包括元素的<code>内容（content）</code>，元素的<code>内边距（padding）</code>，元素的<code>边框（border）</code>，元素的<code>外边距（margin）</code>四个部分。这四个部分占有的空间中，有的部分可以显示相应的内容，而有的部分只用来分隔相邻的区域或区域。4个部分一起构成了css中元素的盒模型。</p>
+<p><strong>2、行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</strong></p>
+<ul>
+<li>行内元素：a、b、span、img、input、strong、select、label、em、button、textarea</li>
+<li>块级元素：div、ul、li、dl、dt、dd、p、h1-h6、blockquote</li>
+<li>空元素：即系没有内容的HTML元素，例如：br、meta、hr、link、input、img</li>
+</ul>
+<p><strong>3、CSS实现垂直水平居中</strong></p>
+<p>很经典的问题有很多种方法，下面是其中一种解决办法：</p>
+<p>html：</p>
+<pre><code>&lt;div class=&quot;wrapper&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;  
+</code></pre>
+<p>css:</p>
+<pre><code>.wrapper &#123;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: #ddd;
+ &#125;
+.content&#123;
+    background-color:#6699FF;
+    width:200px;
+    height:200px;
+    position: absolute;        //父元素需要相对定位
+    top: 50%;
+    left: 50%;
+    margin-top:-100px ;   //二分之一的height，width
+    margin-left: -100px;
+&#125; 
+</code></pre>
+<p><strong>4.简书一下src和href的区别</strong></p>
+<ul>
+<li>href 是指向网络资源所在位置，建立和当前元素（锚点）或当前文档（链接）之间的链接，用于超链接。</li>
+<li>src是指向外部资源的位置，指向的内容将会嵌入到文档中当前标签所在位置；在请求src资源时会将其指向的资源下载并应用到文档内，例如js脚本，img图片和frame等元素。当浏览器解析到该元素时，会暂停其他资源的下载和处理，直到将该资源加载、编译、执行完毕，图片和框架等元素也如此，类似于将所指向资源嵌入当前标签内。这也是为什么将js脚本放在底部而不是头部。</li>
+</ul>
+<p><strong>5.什么是css hack</strong></p>
+<p>一般来说是针对不同的浏览器写不同的CSS,就是 CSS Hack。<br>IE浏览器Hack一般又分为三种，条件Hack、属性级Hack、选择符Hack（详细参考CSS文档：css文档）。例如：</p>
+<pre><code> // 1、条件Hack
+&lt;!--[if IE]&gt;
+  &lt;style&gt;
+        .test&#123;color:red;&#125;
+  &lt;/style&gt;
+&lt;![endif]--&gt;
+// 2、属性Hack
+.test&#123;
+color:#090\9; /* For IE8+ */
+*color:#f00;  /* For IE7 and earlier */
+_color:#ff0;  /* For IE6 and earlier */
+&#125;
+// 3、选择符Hack
+* html .test&#123;color:#090;&#125;       /* For IE6 and earlier */
+* + html .test&#123;color:#ff0;&#125;     /* For IE7 */
+</code></pre>
+<p><strong>6.简述同步和异步的区别</strong></p>
+<p>同步是阻塞模式，异步是非阻塞模式。<br>同步就是指一个进程在执行某个请求的时候，若该请求需要一段时间才能返回信息，那么这个进程将会一直等待下去，直到收到返回信息才继续执行下去；<br>异步是指进程不需要一直等下去，而是继续执行下面的操作，不管其他进程的状态。当有消息返回时系统会通知进程进行处理，这样可以提高执行的效率。</p>
+<p><strong>7、px和em的区别</strong></p>
+<p>px和em都是长度单位，区别是，px的值是固定的，指定是多少就是多少，计算比较容易。em得值不是固定的，并且em会继承父级元素的字体大小。<br>浏览器的默认字体高都是16px。所以未经调整的浏览器都符合: 1em=16px。那么12px=0.75em, 10px=0.625em </p>
+<p><strong>8.什么叫优雅降级和渐进增强？</strong></p>
+<p>渐进增强 progressive enhancement：<br>针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。<br>优雅降级 graceful degradation：<br>一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。<br>区别：</p>
+<ul>
+<li>a. 优雅降级是从复杂的现状开始，并试图减少用户体验的供给</li>
+<li>b. 渐进增强则是从一个非常基础的，能够起作用的版本开始，并不断扩充，以适应未来环境的需要</li>
+<li>c. 降级（功能衰减）意味着往回看；而渐进增强则意味着朝前看，同时保证其根基处于安全地带</li>
+</ul>
+<p><strong>浏览器的内核分别是什么?</strong></p>
+<ul>
+<li>IE: trident内核</li>
+<li>Firefox：gecko内核</li>
+<li>Safari：webkit内核</li>
+<li>Opera：以前是presto内核，Opera现已改用Google Chrome的Blink内核</li>
+<li>Chrome：Blink(基于webkit，Google与Opera Software共同开发)</li>
+</ul>
+<h4 id="JavaScript部分"><a href="#JavaScript部分" class="headerlink" title="JavaScript部分"></a>JavaScript部分</h4><p><strong>1.怎样添加、移除、移动、复制、创建和查找节点？</strong></p>
+<p>1.创建新节点<br>createDocumentFragment() //创建一个DOM片段<br>createElement() //创建一个具体的元素<br>createTextNode() //创建一个文本节点</p>
+<p>2.添加、移除、替换、插入<br>appendChild() //添加<br>removeChild() //移除<br>replaceChild() //替换<br>insertBefore() //插入</p>
+<p>3.查找<br>getElementsByTagName() //通过标签名称<br>getElementsByName() //通过元素的Name属性的值<br>getElementById() //通过元素Id，唯一性</p>
+<p><strong>2.如何消除一个数组里面重复的元素？</strong></p>
+<pre><code>// 方法一：
+var arr1 =[1,2,2,2,3,3,3,4,5,6],
+    arr2 = [];
+for(var i = 0,len = arr1.length; i&lt; len; i++)&#123;
+    if(arr2.indexOf(arr1[i]) &lt; 0)&#123;
+        arr2.push(arr1[i]);
+    &#125;
+&#125;
+document.write(arr2); // 1,2,3,4,5,6
+</code></pre>
+<p><strong>3.在Javascript中什么是伪数组？如何将伪数组转化为标准数组？</strong></p>
+<p>伪数组（类数组）：无法直接调用数组方法或期望length属性有什么特殊的行为，但仍可以对真正数组遍历方法来遍历它们。典型的是函数的argument参数，还有像调用getElementsByTagName,document.childNodes之类的,它们都返回NodeList对象都属于伪数组。可以使用Array.prototype.slice.call(fakeArray)将数组转化为真正的Array对象。</p>
+<pre><code>function log()&#123;
+ var args = Array.prototype.slice.call(arguments);  
+//为了使用unshift数组方法，将argument转化为真正的数组
+ args.unshift(&#39;(app)&#39;);
+  console.log.apply(console, args);
+&#125;;
+</code></pre>
+<p><strong>4.addEventListener最后一个参数是做什么用的</strong>   </p>
+<p>规定事件是冒泡还是捕获。false是冒泡，true是捕获</p>
+<p><strong>5.什么是冒泡，什么是捕获</strong>    </p>
+<p>当一个元素触发了一个事件之后就会像上层传递直至body，document。捕获是从最不具体的传至最具体的</p>
+<p><strong>6.所有的事件都可以冒泡么</strong>    </p>
+<p>不是，blur focus change不可冒泡</p>
+<p><strong>7.怎么取消事件冒泡</strong>    </p>
+<p>eve.preventDefault(阻止事件默认行为)</p>
+<h4 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h4><p><strong>1.一次完整的HTTP事务是怎样的一个过程？</strong></p>
+<p>基本流程：</p>
+<ul>
+<li>a. 域名解析</li>
+<li>b. 发起TCP的3次握手</li>
+<li>c. 建立TCP连接后发起http请求</li>
+<li>d. 服务器端响应http请求，浏览器得到html代码</li>
+<li>e. 浏览器解析html代码，并请求html代码中的资源</li>
+<li>f. 浏览器对页面进行渲染呈现给用户</li>
+</ul>
+<h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><blockquote>
+<p>2017/06/13 第一次更新文章</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">laoxue</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://laoxue.github.io/2017/06/13/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E5%B9%B2%E8%B4%A7%E9%9B%86%E5%90%88/">http://laoxue.github.io/2017/06/13/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E5%B9%B2%E8%B4%A7%E9%9B%86%E5%90%88/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://laoxue.github.io" target="_blank">laoxue's blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">面试题</a></div><div class="post_share"><div class="social-share" data-image="https://res.cloudinary.com/practicaldev/image/fetch/s--fBO0Zf3i--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/q97aza64off758w3wfdo.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2017/06/15/Gulp%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/"><img class="prev-cover" src="http://img0.imgtn.bdimg.com/it/u=204367319,272230027&amp;fm=26&amp;gp=0.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Gulp配置文件详解</div></div></a></div><div class="next-post pull-right"><a href="/2017/06/13/%E4%B8%80%E5%8F%AA%E7%8C%BF%E7%9A%84%E6%97%85%E8%A1%8C%E6%97%A5%E8%AE%B0/"><img class="next-cover" src="https://dali-saymore-public.oss-cn-shanghai.aliyuncs.com/travel/travil/dl01.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">一只猿的旅行日记</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://upload.jianshu.io/users/upload_avatars/3612487/2dec3011-77f2-4c32-8ce1-cf47b470b750.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">laoxue</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/laoxue" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:daliyouhuashuo@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">不要等待，时机永远不会恰到好处</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88"><span class="toc-number">1.</span> <span class="toc-text">前端工程师</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#HTML-CSS%E9%83%A8%E5%88%86"><span class="toc-number">1.1.</span> <span class="toc-text">HTML&#x2F;CSS部分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JavaScript%E9%83%A8%E5%88%86"><span class="toc-number">1.2.</span> <span class="toc-text">JavaScript部分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTTP"><span class="toc-number">1.3.</span> <span class="toc-text">HTTP</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="toc-number">2.</span> <span class="toc-text">更新日志</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/11/08/%E6%B5%8B%E8%AF%95%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F/" title="测试自动化部署是否成功"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="测试自动化部署是否成功"/></a><div class="content"><a class="title" href="/2022/11/08/%E6%B5%8B%E8%AF%95%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F/" title="测试自动化部署是否成功">测试自动化部署是否成功</a><time datetime="2022-11-08T14:36:36.000Z" title="发表于 2022-11-08 14:36:36">2022-11-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/03/20/Windows%E4%B8%AD%E4%B8%80%E6%AC%BE%E8%83%BD%E6%8F%90%E5%8D%87%E4%BD%A0%E6%95%88%E7%8E%87%E7%9A%84%E5%B7%A5%E5%85%B7/" title="Windows中一款能提升你效率的工具"><img src="https://dali-saymore-public.oss-cn-shanghai.aliyuncs.com/wox.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Windows中一款能提升你效率的工具"/></a><div class="content"><a class="title" href="/2019/03/20/Windows%E4%B8%AD%E4%B8%80%E6%AC%BE%E8%83%BD%E6%8F%90%E5%8D%87%E4%BD%A0%E6%95%88%E7%8E%87%E7%9A%84%E5%B7%A5%E5%85%B7/" title="Windows中一款能提升你效率的工具">Windows中一款能提升你效率的工具</a><time datetime="2019-03-20T15:20:39.000Z" title="发表于 2019-03-20 15:20:39">2019-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/08/25/%E8%81%8A%E8%81%8AJS%E5%8A%A8%E7%94%BB%E5%BA%93-Velocity-js/" title="聊聊JS动画库:Velocity.js"><img src="https://www.theengineeringprojects.com/wp-content/uploads/2021/05/what-is-velocity.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="聊聊JS动画库:Velocity.js"/></a><div class="content"><a class="title" href="/2017/08/25/%E8%81%8A%E8%81%8AJS%E5%8A%A8%E7%94%BB%E5%BA%93-Velocity-js/" title="聊聊JS动画库:Velocity.js">聊聊JS动画库:Velocity.js</a><time datetime="2017-08-25T08:37:31.000Z" title="发表于 2017-08-25 08:37:31">2017-08-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/08/15/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/" title="python数据分析入门教学"><img src="https://i.ytimg.com/vi/WwqumCgyq7E/maxresdefault.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python数据分析入门教学"/></a><div class="content"><a class="title" href="/2017/08/15/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/" title="python数据分析入门教学">python数据分析入门教学</a><time datetime="2017-08-15T11:37:13.000Z" title="发表于 2017-08-15 11:37:13">2017-08-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/08/13/git%E4%B8%8Egithub%E7%9A%84%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/" title="git与github的正确使用姿势"><img src="https://edupala.com/wp-content/uploads/2018/05/git.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git与github的正确使用姿势"/></a><div class="content"><a class="title" href="/2017/08/13/git%E4%B8%8Egithub%E7%9A%84%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/" title="git与github的正确使用姿势">git与github的正确使用姿势</a><time datetime="2017-08-13T11:37:48.000Z" title="发表于 2017-08-13 11:37:48">2017-08-13</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By laoxue</div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div></div></body></html>

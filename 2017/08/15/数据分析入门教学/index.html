@@ -1,0 +1,226 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>python数据分析入门教学 | laoxue's blog</title><meta name="keywords" content="python数据分析入门教学||python||脚本语言"><meta name="author" content="laoxue"><meta name="copyright" content="laoxue"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言　python可以说是黑魔法了，利用python可以做到很多酷酷的事情，也应了那句 &quot;人生苦短，我用python&quot;　 python可以做爬虫采集、数据可视化统计、web开发，还可以开发简易的端口漏洞采集工具。总之利用python你可以做到任何你想做到的事情。今天我来简单的介绍下 pyhton数据可视化库之一的 matplotlib库 。 虽然python还有很多可视化统计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python数据分析入门教学">
+<meta property="og:url" content="http://laoxue.github.io/2017/08/15/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/index.html">
+<meta property="og:site_name" content="laoxue&#39;s blog">
+<meta property="og:description" content="前言　python可以说是黑魔法了，利用python可以做到很多酷酷的事情，也应了那句 &quot;人生苦短，我用python&quot;　 python可以做爬虫采集、数据可视化统计、web开发，还可以开发简易的端口漏洞采集工具。总之利用python你可以做到任何你想做到的事情。今天我来简单的介绍下 pyhton数据可视化库之一的 matplotlib库 。 虽然python还有很多可视化统计">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.ytimg.com/vi/WwqumCgyq7E/maxresdefault.jpg">
+<meta property="article:published_time" content="2017-08-15T11:37:13.000Z">
+<meta property="article:modified_time" content="2022-11-08T06:37:38.401Z">
+<meta property="article:author" content="laoxue">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.ytimg.com/vi/WwqumCgyq7E/maxresdefault.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://laoxue.github.io/2017/08/15/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script async="async"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: '',
+  enable_page_level_ads: 'true'
+});</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'python数据分析入门教学',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: undefined,
+  isToc: true,
+  postUpdate: '2022-11-08 06:37:38'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://upload.jianshu.io/users/upload_avatars/3612487/2dec3011-77f2-4c32-8ce1-cf47b470b750.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.ytimg.com/vi/WwqumCgyq7E/maxresdefault.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">laoxue's blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">python数据分析入门教学</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2017-08-15T11:37:13.000Z" title="发表于 2017-08-15 11:37:13">2017-08-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-08T06:37:38.401Z" title="更新于 2022-11-08 06:37:38">2022-11-08</time></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src="http://upload-images.jianshu.io/upload_images/3612487-20dedac831f6075a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Python"></p>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>　python可以说是黑魔法了，利用python可以做到很多酷酷的事情，也应了那句 <code>&quot;人生苦短，我用python&quot;</code><br>　 python可以做<code>爬虫采集</code>、<code>数据可视化统计</code>、<code>web开发</code>，还可以开发简易的<code>端口漏洞采集工具</code>。总之利用python你可以做到任何你想做到的事情。今天我来简单的介绍下 pyhton数据可视化库之一的 matplotlib库 。 虽然python还有很多可视化统计库但是大部分都以matplotlib为基础，所以学习matplotlib库对以后用python开发数据可视化统计来说很重要。</p>
+<p>首先在使用前你需要下载matplotlib库</p>
+<pre><code>pip install matplotlib 
+</code></pre>
+<p>然后再创建一个.py结尾的文件 并且在开头书写代码 </p>
+<pre><code>import matplotlib.pyplot as plt 
+</code></pre>
+<h4 id="散点图"><a href="#散点图" class="headerlink" title="散点图"></a>散点图</h4><p>我们首先来用<code>matplotlib库</code>画一个散点图 使用的方法是 <strong>scatter()</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3612487-a3ba77dd0e8a3ca9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="散点图"></p>
+<p>使用<code>matplotlib.pyplot.scatter()</code>方法来做散点图，第一个参数作为x轴，第二参数作为y轴，注意两个参数都只能是列表数据或者Series</p>
+<pre><code># 使用列表数据作为坐标轴 这里的plt即是pyplot方法简写
+import matplotlib.pyplot as plt
+weight = [600,150,200,300,200,100,125,180] 
+height = [60,65,73,70,65,58,66,67]
+plt.scatter(height, weight)      //画出设订的点 height代表x轴 weight代表y轴
+plt.show()      //这里告诉python 显示画出的散点图
+</code></pre>
+<p>方法： </p>
+<pre><code>plt.scatter(x,y) //表示画出对应的点
+plt.title(&#39;&#39;)  //用来绘制表格标题
+plt.xlabel(&#39;&#39;)   //用来绘制表格X轴标题
+plt.ylabel(&#39;&#39;)  //用来绘制表格Y轴标题
+</code></pre>
+<h4 id="折线图"><a href="#折线图" class="headerlink" title="折线图"></a>折线图</h4><p>然后我们试一试折线图  使用的方法是<code> plot()</code></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3612487-d72d24979f55768f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="折线图"></p>
+<pre><code># 使用列表数据作为坐标轴
+age = [5, 10, 15, 20, 25, 30]
+height = [25, 45, 65, 75, 75, 75]
+plt.plot(age, height)  //这里放入 x轴和y轴的点
+plt.title(&#39;Age vs Height&#39;) //表格标题
+plt.xlabel(&#39;age&#39;)    //x轴标题
+plt.ylabel(&#39;Height&#39;)  //y轴标题
+plt.show()
+</code></pre>
+<h4 id="条形图"><a href="#条形图" class="headerlink" title="条形图"></a>条形图</h4><p>接下来是条形图 使用的方法是 <strong>barh()和bar()</strong></p>
+<p>条形图有两个方法 **barh()**方法用来绘制水平型条形图</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3612487-0823c620506f6923.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="水平条形图"></p>
+<blockquote>
+<p>现在要按月份统计烧毁的面积</p>
+</blockquote>
+<p>先做一个透视图</p>
+<pre><code>area_by_month = forest_fires.pivot_table(index=&quot;month&quot;, values=&quot;area&quot;, aggfunc=numpy.sum) //计算每个月的烧毁面积
+plt.barh(range(len(area_by_month)), area_by_month)
+plt.title(&#39;Month vs Area&#39;)  //表格标题
+plt.xlabel(&#39;month&#39;)   //x轴标题
+plt.ylabel(&#39;area&#39;)   //y轴标题
+plt.show()
+</code></pre>
+<p>而bar()方法用来绘制垂直条形图 如下图：参数同barh()相同</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3612487-c9f513aecb5b8590.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="垂直条形图"></p>
+<h4 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h4><p>接下来我们考虑的是绘制表格的美观问题 我们可以设置不同的作图主题 使用style.ues()函数</p>
+<p>这里简单介绍两个主题:</p>
+<p><strong>fivethirtyeight</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3612487-a9a8925700e87c63.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="fivethirtyeight"></p>
+<p><strong>ggplot</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3612487-b77b89dcd2e6b8d1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ggplot"></p>
+<p>通常使用的主题：fivethirtyeight，ggplot，dark_background，bmh</p>
+<blockquote>
+<p>推荐入门python数据分析书籍：<br><strong>《利用python进行数据分析》</strong></p>
+</blockquote>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>　总体来说python是一门非常神奇的语言，可以利用它做到你很多意想不到的事情，我上大学的时候用python爬虫爬过学校的所有<code>妹子图（：-））</code>,也做过<code>自动生成验证码</code>或者一些便利生活的脚本什么的，总之python这门语言会让你对学习它充满兴趣，而近几年随着<code>大数据时代</code>的来临，统计学也越来越重要，数据分析对一个公司有着至关重要的地位，利用python也可以简单的处理这些，当然还有R语言这种专门对付数据统计的语言，总之今天的分享就到这里.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">laoxue</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://laoxue.github.io/2017/08/15/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/">http://laoxue.github.io/2017/08/15/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://laoxue.github.io" target="_blank">laoxue's blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/python/">python</a></div><div class="post_share"><div class="social-share" data-image="https://i.ytimg.com/vi/WwqumCgyq7E/maxresdefault.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2017/08/25/%E8%81%8A%E8%81%8AJS%E5%8A%A8%E7%94%BB%E5%BA%93-Velocity-js/"><img class="prev-cover" src="https://www.theengineeringprojects.com/wp-content/uploads/2021/05/what-is-velocity.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">聊聊JS动画库:Velocity.js</div></div></a></div><div class="next-post pull-right"><a href="/2017/08/13/git%E4%B8%8Egithub%E7%9A%84%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/"><img class="next-cover" src="https://edupala.com/wp-content/uploads/2018/05/git.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">git与github的正确使用姿势</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://upload.jianshu.io/users/upload_avatars/3612487/2dec3011-77f2-4c32-8ce1-cf47b470b750.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">laoxue</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/laoxue" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:daliyouhuashuo@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">不要等待，时机永远不会恰到好处</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="toc-number">1.1.</span> <span class="toc-text">散点图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%98%E7%BA%BF%E5%9B%BE"><span class="toc-number">1.2.</span> <span class="toc-text">折线图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%A1%E5%BD%A2%E5%9B%BE"><span class="toc-number">1.3.</span> <span class="toc-text">条形图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98"><span class="toc-number">1.4.</span> <span class="toc-text">主题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">2.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/11/08/%E6%B5%8B%E8%AF%95%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F/" title="测试自动化部署是否成功"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="测试自动化部署是否成功"/></a><div class="content"><a class="title" href="/2022/11/08/%E6%B5%8B%E8%AF%95%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F/" title="测试自动化部署是否成功">测试自动化部署是否成功</a><time datetime="2022-11-08T14:36:36.000Z" title="发表于 2022-11-08 14:36:36">2022-11-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/03/20/Windows%E4%B8%AD%E4%B8%80%E6%AC%BE%E8%83%BD%E6%8F%90%E5%8D%87%E4%BD%A0%E6%95%88%E7%8E%87%E7%9A%84%E5%B7%A5%E5%85%B7/" title="Windows中一款能提升你效率的工具"><img src="https://dali-saymore-public.oss-cn-shanghai.aliyuncs.com/wox.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Windows中一款能提升你效率的工具"/></a><div class="content"><a class="title" href="/2019/03/20/Windows%E4%B8%AD%E4%B8%80%E6%AC%BE%E8%83%BD%E6%8F%90%E5%8D%87%E4%BD%A0%E6%95%88%E7%8E%87%E7%9A%84%E5%B7%A5%E5%85%B7/" title="Windows中一款能提升你效率的工具">Windows中一款能提升你效率的工具</a><time datetime="2019-03-20T15:20:39.000Z" title="发表于 2019-03-20 15:20:39">2019-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/08/25/%E8%81%8A%E8%81%8AJS%E5%8A%A8%E7%94%BB%E5%BA%93-Velocity-js/" title="聊聊JS动画库:Velocity.js"><img src="https://www.theengineeringprojects.com/wp-content/uploads/2021/05/what-is-velocity.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="聊聊JS动画库:Velocity.js"/></a><div class="content"><a class="title" href="/2017/08/25/%E8%81%8A%E8%81%8AJS%E5%8A%A8%E7%94%BB%E5%BA%93-Velocity-js/" title="聊聊JS动画库:Velocity.js">聊聊JS动画库:Velocity.js</a><time datetime="2017-08-25T08:37:31.000Z" title="发表于 2017-08-25 08:37:31">2017-08-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/08/15/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/" title="python数据分析入门教学"><img src="https://i.ytimg.com/vi/WwqumCgyq7E/maxresdefault.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python数据分析入门教学"/></a><div class="content"><a class="title" href="/2017/08/15/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/" title="python数据分析入门教学">python数据分析入门教学</a><time datetime="2017-08-15T11:37:13.000Z" title="发表于 2017-08-15 11:37:13">2017-08-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/08/13/git%E4%B8%8Egithub%E7%9A%84%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/" title="git与github的正确使用姿势"><img src="https://edupala.com/wp-content/uploads/2018/05/git.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git与github的正确使用姿势"/></a><div class="content"><a class="title" href="/2017/08/13/git%E4%B8%8Egithub%E7%9A%84%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/" title="git与github的正确使用姿势">git与github的正确使用姿势</a><time datetime="2017-08-13T11:37:48.000Z" title="发表于 2017-08-13 11:37:48">2017-08-13</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By laoxue</div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div></div></body></html>

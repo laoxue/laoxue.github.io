@@ -1,0 +1,340 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Css3整理干货合集 | laoxue's blog</title><meta name="keywords" content="Css3整理干货合集||CSS||教学"><meta name="author" content="laoxue"><meta name="copyright" content="laoxue"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言:把以前的手写笔记整理到博客中…   css3边框： border-radius 圆角 border-image 边背景图 box-shadow 阴影   border-radius圆角 设置百分比或者值px都可以 50% 为正圆 一个值为默认设置所有边角 四个值代表设置四个边角  box-shadow 阴影 设置四个值 按顺序分别是   offset-x 代表x轴偏移值 值为正则代表右侧，负">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Css3整理干货合集">
+<meta property="og:url" content="http://laoxue.github.io/2017/06/09/Css3%E6%95%B4%E7%90%86%E5%B9%B2%E8%B4%A7%E5%90%88%E9%9B%86/index.html">
+<meta property="og:site_name" content="laoxue&#39;s blog">
+<meta property="og:description" content="前言:把以前的手写笔记整理到博客中…   css3边框： border-radius 圆角 border-image 边背景图 box-shadow 阴影   border-radius圆角 设置百分比或者值px都可以 50% 为正圆 一个值为默认设置所有边角 四个值代表设置四个边角  box-shadow 阴影 设置四个值 按顺序分别是   offset-x 代表x轴偏移值 值为正则代表右侧，负">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://dali-saymore-public.oss-cn-shanghai.aliyuncs.com/css3.jpeg">
+<meta property="article:published_time" content="2017-06-09T10:13:25.000Z">
+<meta property="article:modified_time" content="2022-11-08T06:37:38.397Z">
+<meta property="article:author" content="laoxue">
+<meta property="article:tag" content="CSS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dali-saymore-public.oss-cn-shanghai.aliyuncs.com/css3.jpeg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://laoxue.github.io/2017/06/09/Css3%E6%95%B4%E7%90%86%E5%B9%B2%E8%B4%A7%E5%90%88%E9%9B%86/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script async="async"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: '',
+  enable_page_level_ads: 'true'
+});</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Css3整理干货合集',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: undefined,
+  isToc: true,
+  postUpdate: '2022-11-08 06:37:38'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://upload.jianshu.io/users/upload_avatars/3612487/2dec3011-77f2-4c32-8ce1-cf47b470b750.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://dali-saymore-public.oss-cn-shanghai.aliyuncs.com/css3.jpeg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">laoxue's blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Css3整理干货合集</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2017-06-09T10:13:25.000Z" title="发表于 2017-06-09 10:13:25">2017-06-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-08T06:37:38.397Z" title="更新于 2022-11-08 06:37:38">2022-11-08</time></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h6 id="前言"><a href="#前言" class="headerlink" title="前言:"></a><strong>前言:</strong></h6><p><img src="http://upload-images.jianshu.io/upload_images/3612487-2a72179c9ccffc6f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><br>把以前的手写笔记整理到<code>博客</code>中…</p>
+<hr>
+<blockquote>
+<h3 id="css3边框："><a href="#css3边框：" class="headerlink" title="css3边框："></a>css3边框：</h3></blockquote>
+<pre><code>border-radius 圆角
+border-image 边背景图
+box-shadow 阴影
+</code></pre>
+<blockquote>
+<h4 id="border-radius圆角"><a href="#border-radius圆角" class="headerlink" title="border-radius圆角"></a>border-radius圆角</h4></blockquote>
+<p>设置百分比或者值px都可以 50% 为正圆 一个值为默认设置所有边角 四个值代表设置四个边角</p>
+<blockquote>
+<h4 id="box-shadow-阴影"><a href="#box-shadow-阴影" class="headerlink" title="box-shadow 阴影"></a>box-shadow 阴影</h4></blockquote>
+<p>设置<code>四个值</code> 按顺序分别是 </p>
+<blockquote>
+<p><code>offset-x</code> 代表x轴偏移值 值为正则代表右侧，负代表左侧</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/3612487-b78cfb8c1147e57d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<blockquote>
+<p><code>offset-y</code> 代表y轴偏移值<br>值为正则代表上方，负代表下方</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/3612487-6d9440de122ac4d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<blockquote>
+<p><code>blur</code> 代表阴影的模糊半径<br>值越大则越模糊 负值不合法</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/3612487-7311ce605579fc5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<blockquote>
+<p><code>color</code> 代表模糊的颜色 可设置<strong>red</strong>或者**#f1f1f1<strong>或者</strong>rgba**等类型值</p>
+</blockquote>
+<blockquote>
+<p><code>多重阴影</code> 一个div上可以添加多个阴影效果，方法只需把添加的效果用 <strong>逗号</strong> 隔开即可</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/3612487-e0ee8ed439513a0f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>参考文章:<a target="_blank" rel="noopener" href="http://www.iyangqiong.com/web/318.html">http://www.iyangqiong.com/web/318.html</a></p>
+<blockquote>
+<h4 id="border-image边角背景图"><a href="#border-image边角背景图" class="headerlink" title="border-image边角背景图"></a>border-image边角背景图</h4></blockquote>
+<p><code>三个值</code> 第一个是<code>url(文件路径)</code> 第二个是<code>裁剪位置(默认像素</code>) 第三个是<code>重复性</code><br>这个一定程度赶上跟<code>border宽度</code>上有关系</p>
+<blockquote>
+<p>border-image: &lt;‘border-image-source’&gt; || &lt;‘border-image-slice’&gt; [ / &lt;‘border-image-width’&gt; | /</p>
+</blockquote>
+<h3 id="css3背景"><a href="#css3背景" class="headerlink" title="css3背景"></a>css3背景</h3><pre><code>backgournd-image
+background-size
+background-origin
+background-clip
+</code></pre>
+<h4 id="background-image"><a href="#background-image" class="headerlink" title="background-image"></a>background-image</h4><p>可添加多个背景图 用 <strong>逗号</strong> 相隔<br>对应 <strong>background-position</strong> <strong>background-repeat</strong> 设置背景图的位置和重复</p>
+<h4 id="background-size"><a href="#background-size" class="headerlink" title="background-size"></a>background-size</h4><p>可指定<code>background-size</code> 为背景图片设置大小<br>可设置宽和高</p>
+<h4 id="background-origin"><a href="#background-origin" class="headerlink" title="background-origin"></a>background-origin</h4><p>指定了背景图的位置区域 三个值对应区域如图</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3612487-663da47160b908bc.gif?imageMogr2/auto-orient/strip"></p>
+<h4 id="background-clip"><a href="#background-clip" class="headerlink" title="background-clip"></a>background-clip</h4><p>这个属性是指从指定位置开始绘制 三个值跟上边的一样</p>
+<blockquote>
+<h3 id="css3渐变"><a href="#css3渐变" class="headerlink" title="css3渐变"></a>css3渐变</h3></blockquote>
+<p>分两种渐变：<code>线性渐变（Linear Gradients）</code>- 向下/向上/向左/向右/对角方向和<code>径向渐变（Radial Gradients）</code>- 由它们的中心定义</p>
+<p>也就是一个是从<code>一边到另一边</code> 一个是从<code>中间到四周</code>的方式渐变</p>
+<blockquote>
+<h5 id="首先linear-gradient-线形渐变-默认从上到下"><a href="#首先linear-gradient-线形渐变-默认从上到下" class="headerlink" title="首先linear-gradient 线形渐变(默认从上到下)"></a>首先linear-gradient 线形渐变(默认从上到下)</h5></blockquote>
+<pre><code>background: linear-gradient(direction, color-stop1, color-stop2, ...);
+direction值可为开始方向也可为角度deg 后面是开始颜色和结束颜色(可为rgba也可为多个颜色值)
+repeating-linear-gradient()重复性渐变
+</code></pre>
+<blockquote>
+<h5 id="然后radial-gradient-线形渐变-四周向外扩"><a href="#然后radial-gradient-线形渐变-四周向外扩" class="headerlink" title="然后radial-gradient 线形渐变(四周向外扩)"></a>然后radial-gradient 线形渐变(四周向外扩)</h5></blockquote>
+<pre><code>background: radial-gradient(center, shape size, start-color, ..., last-color);
+分别代表 渐变中心(默认center)，形状，大小，开始颜色，结束颜色
+</code></pre>
+<blockquote>
+<h3 id="css3文本效果"><a href="#css3文本效果" class="headerlink" title="css3文本效果"></a>css3文本效果</h3></blockquote>
+<pre><code>text-shadow
+box-shadow 
+text-overflow
+word-wrap
+word-break
+</code></pre>
+<blockquote>
+<h5 id="text-shadow-文本阴影"><a href="#text-shadow-文本阴影" class="headerlink" title="text-shadow 文本阴影"></a>text-shadow 文本阴影</h5></blockquote>
+<pre><code>text-shadow:四个值 如同 box-shadow
+</code></pre>
+<blockquote>
+<h5 id="text-soverflow-文本溢出"><a href="#text-soverflow-文本溢出" class="headerlink" title="text-soverflow 文本溢出"></a>text-soverflow 文本溢出</h5></blockquote>
+<pre><code>text-overflow: 一个值 两个内容
+elipsis 溢出裁剪省略号  clip溢出裁剪
+</code></pre>
+<blockquote>
+<h5 id="word-wrap-文本换行"><a href="#word-wrap-文本换行" class="headerlink" title="word-wrap 文本换行"></a>word-wrap 文本换行</h5></blockquote>
+<pre><code>word-wrap:break-word;强制自动换行
+</code></pre>
+<blockquote>
+<h5 id="word-break-文本拆分换行"><a href="#word-break-文本拆分换行" class="headerlink" title="word-break 文本拆分换行"></a>word-break 文本拆分换行</h5></blockquote>
+<pre><code>word-break:一个值 两个内容
+keep-all 保持单词完整 break-all 保持每行够满字符
+</code></pre>
+<blockquote>
+<h3 id="font-face自定义字体"><a href="#font-face自定义字体" class="headerlink" title="@font-face自定义字体"></a>@font-face自定义字体</h3></blockquote>
+<pre><code>@font-face&#123;
+//自定义字体名字
+font-family:name;
+src:url(&#39;字体文件.ttf&#39;),
+//ie9专用字体
+url(&#39;字体文件.eot&#39;);
+//使用粗体文本
+font-weight:bold;
+&#125;
+</code></pre>
+<p>使用的时候<code>font-family：</code>自定义名字</p>
+<h2 id="动画相关"><a href="#动画相关" class="headerlink" title="动画相关"></a>动画相关</h2><h3 id="css3-2d转换-transform"><a href="#css3-2d转换-transform" class="headerlink" title="css3 2d转换 transform:"></a>css3 2d转换 <strong>transform:</strong></h3><pre><code>translate()
+rotate()  旋转
+scale()  缩放
+skew()
+matrix()
+</code></pre>
+<h4 id="translate-位移"><a href="#translate-位移" class="headerlink" title="translate() 位移"></a>translate() 位移</h4><pre><code>transform:translate(x,y) 
+两个值 x正即向右移动，负值即是向左移动 y正向上负向下
+也可单独位移 **translateX(n)**  **translateY(n)**
+</code></pre>
+<h4 id="rotate-旋转"><a href="#rotate-旋转" class="headerlink" title="rotate() 旋转"></a>rotate() 旋转</h4><pre><code>rotate(deg) 正是准时针负是逆时针
+</code></pre>
+<h4 id="scale-缩放"><a href="#scale-缩放" class="headerlink" title="scale() 缩放"></a>scale() 缩放</h4><pre><code>scale(x,y) x是宽度x倍   y是长度y倍
+也可单独缩放 **scaleX(n)**  **scaleY(n)**
+</code></pre>
+<h4 id="skew-倾斜"><a href="#skew-倾斜" class="headerlink" title="skew() 倾斜"></a>skew() 倾斜</h4><pre><code>skew(deg,deg) 表示向x轴和y轴倾斜的方向
+也可单独倾斜 **　skewX(n)**  **　skewY(n)**
+</code></pre>
+<h4 id="matrix-集合"><a href="#matrix-集合" class="headerlink" title="matrix() 集合"></a>matrix() 集合</h4><pre><code>matrix(位移，旋转，缩放，倾斜)表示所有transform的集合都可以写在这里
+</code></pre>
+<h3 id="css3-3d转换-改变xyz轴实现效果"><a href="#css3-3d转换-改变xyz轴实现效果" class="headerlink" title="css3 3d转换 改变xyz轴实现效果"></a>css3 3d转换 改变xyz轴实现效果</h3><pre><code>matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)定义 3D 转换，使用 16 个值的 4x4 矩阵。
+
+translate3d(x,y,z)定义 3D 转化
+
+translateX(x)定义 3D 转化，仅使用用于 X 轴的值
+
+translateY(y)定义 3D 转化，仅使用用于 Y 轴的值
+
+translateZ(z)定义 3D 转化，仅使用用于 Z 轴的值
+
+scale3d(x,y,z)定义 3D 缩放转换
+
+scaleX(x)定义 3D 缩放转换，通过给定一个 X 轴的值
+
+scaleY(y)定义 3D 缩放转换，通过给定一个 Y 轴的值
+
+scaleZ(z)定义 3D 缩放转换，通过给定一个 Z 轴的值
+
+rotate3d(x,y,z,angle)定义 3D 旋转
+
+rotateX(angle)    定义沿 X 轴的 3D 旋转。
+
+rotateY(angle)定义沿 Y 轴的 3D 旋转。
+
+rotateZ(angle)定义沿 Z 轴的 3D 旋转 
+
+perspective(n)    定义 3D 转换元素的透视视图
+</code></pre>
+<h3 id="CSS3-过渡"><a href="#CSS3-过渡" class="headerlink" title="CSS3 过渡"></a>CSS3 过渡</h3><pre><code>transition 总集合用于在一个属性中设置四个过渡属性。
+transition: p(名称) d(花费时间) f(时间曲线) d(何时开始) 
+transition-delay 规定过渡效果何时开始。默认是 0。
+transition-duration 定义过渡效果花费的时间。默认是 0
+transition-property 规定应用过渡的 CSS 属性的名称
+transition-timing-function     规定过渡效果的时间曲线。默认是 &quot;ease&quot;
+</code></pre>
+<h3 id="CSS3-动画"><a href="#CSS3-动画" class="headerlink" title="CSS3 动画"></a>CSS3 动画</h3><pre><code>@feyframes规则
+animation
+</code></pre>
+<p>1.首先使用@keyframes创建动画 把它绑定到一个选择器。否则动画不会有效果</p>
+<pre><code>+ 规定动画的名称
++ 规定动画的时长
+</code></pre>
+<p>2.然后用 animation 动画捆绑到div元素</p>
+<pre><code>animation是一个综合简写属性(除animation-play-state) 分开分别是
+animation-name     规定 @keyframes 动画的名称。
+animation-duration     规定动画完成一个周期所花费的秒或毫秒。默认是 0。规定动画完成一个周期所花费的秒或毫秒。默认是 0。
+animation-timing-function 规定动画的速度曲线。默认是 &quot;ease&quot;。
+animation-delay 规定动画何时开始。默认是 0。
+animation-iteration-count     规定动画被播放的次数。默认是 1。
+animation-direction     规定动画是否在下一周期逆向地播放。默认是 &quot;normal&quot;。
+animation-play-state     规定动画是否正在运行或暂停。默认是 &quot;running
+</code></pre>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">laoxue</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://laoxue.github.io/2017/06/09/Css3%E6%95%B4%E7%90%86%E5%B9%B2%E8%B4%A7%E5%90%88%E9%9B%86/">http://laoxue.github.io/2017/06/09/Css3%E6%95%B4%E7%90%86%E5%B9%B2%E8%B4%A7%E5%90%88%E9%9B%86/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://laoxue.github.io" target="_blank">laoxue's blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/CSS/">CSS</a></div><div class="post_share"><div class="social-share" data-image="https://dali-saymore-public.oss-cn-shanghai.aliyuncs.com/css3.jpeg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2017/06/09/ES6-ECMA2016/"><img class="prev-cover" src="https://blog.jscrambler.com/content/images/2017/07/quick-introduction-to-es6-modules.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">ES6(ECMA2016)</div></div></a></div><div class="next-post pull-right"><a href="/2017/06/09/LESS%E4%B8%8ESASS%E7%9A%84%E5%8C%BA%E5%88%AB/"><img class="next-cover" src="https://dali-saymore-public.oss-cn-shanghai.aliyuncs.com/lessvssass.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">LESS与SASS的区别</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2017/06/09/LESS与SASS的区别/" title="LESS与SASS的区别"><img class="cover" src="https://dali-saymore-public.oss-cn-shanghai.aliyuncs.com/lessvssass.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2017-06-09</div><div class="title">LESS与SASS的区别</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://upload.jianshu.io/users/upload_avatars/3612487/2dec3011-77f2-4c32-8ce1-cf47b470b750.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">laoxue</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/laoxue" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:daliyouhuashuo@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">不要等待，时机永远不会恰到好处</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言:</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#css3%E8%BE%B9%E6%A1%86%EF%BC%9A"><span class="toc-number"></span> <span class="toc-text">css3边框：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#border-radius%E5%9C%86%E8%A7%92"><span class="toc-number"></span> <span class="toc-text">border-radius圆角</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#box-shadow-%E9%98%B4%E5%BD%B1"><span class="toc-number"></span> <span class="toc-text">box-shadow 阴影</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#border-image%E8%BE%B9%E8%A7%92%E8%83%8C%E6%99%AF%E5%9B%BE"><span class="toc-number"></span> <span class="toc-text">border-image边角背景图</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#css3%E8%83%8C%E6%99%AF"><span class="toc-number"></span> <span class="toc-text">css3背景</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#background-image"><span class="toc-number"></span> <span class="toc-text">background-image</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#background-size"><span class="toc-number"></span> <span class="toc-text">background-size</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#background-origin"><span class="toc-number"></span> <span class="toc-text">background-origin</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#background-clip"><span class="toc-number"></span> <span class="toc-text">background-clip</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#css3%E6%B8%90%E5%8F%98"><span class="toc-number"></span> <span class="toc-text">css3渐变</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%A6%96%E5%85%88linear-gradient-%E7%BA%BF%E5%BD%A2%E6%B8%90%E5%8F%98-%E9%BB%98%E8%AE%A4%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B"><span class="toc-number"></span> <span class="toc-text">首先linear-gradient 线形渐变(默认从上到下)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%84%B6%E5%90%8Eradial-gradient-%E7%BA%BF%E5%BD%A2%E6%B8%90%E5%8F%98-%E5%9B%9B%E5%91%A8%E5%90%91%E5%A4%96%E6%89%A9"><span class="toc-number"></span> <span class="toc-text">然后radial-gradient 线形渐变(四周向外扩)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#css3%E6%96%87%E6%9C%AC%E6%95%88%E6%9E%9C"><span class="toc-number"></span> <span class="toc-text">css3文本效果</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#text-shadow-%E6%96%87%E6%9C%AC%E9%98%B4%E5%BD%B1"><span class="toc-number"></span> <span class="toc-text">text-shadow 文本阴影</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#text-soverflow-%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA"><span class="toc-number"></span> <span class="toc-text">text-soverflow 文本溢出</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#word-wrap-%E6%96%87%E6%9C%AC%E6%8D%A2%E8%A1%8C"><span class="toc-number"></span> <span class="toc-text">word-wrap 文本换行</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#word-break-%E6%96%87%E6%9C%AC%E6%8B%86%E5%88%86%E6%8D%A2%E8%A1%8C"><span class="toc-number"></span> <span class="toc-text">word-break 文本拆分换行</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#font-face%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93"><span class="toc-number"></span> <span class="toc-text">@font-face自定义字体</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E7%94%BB%E7%9B%B8%E5%85%B3"><span class="toc-number"></span> <span class="toc-text">动画相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#css3-2d%E8%BD%AC%E6%8D%A2-transform"><span class="toc-number"></span> <span class="toc-text">css3 2d转换 transform:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#translate-%E4%BD%8D%E7%A7%BB"><span class="toc-number"></span> <span class="toc-text">translate() 位移</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#rotate-%E6%97%8B%E8%BD%AC"><span class="toc-number"></span> <span class="toc-text">rotate() 旋转</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#scale-%E7%BC%A9%E6%94%BE"><span class="toc-number"></span> <span class="toc-text">scale() 缩放</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#skew-%E5%80%BE%E6%96%9C"><span class="toc-number"></span> <span class="toc-text">skew() 倾斜</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#matrix-%E9%9B%86%E5%90%88"><span class="toc-number"></span> <span class="toc-text">matrix() 集合</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#css3-3d%E8%BD%AC%E6%8D%A2-%E6%94%B9%E5%8F%98xyz%E8%BD%B4%E5%AE%9E%E7%8E%B0%E6%95%88%E6%9E%9C"><span class="toc-number"></span> <span class="toc-text">css3 3d转换 改变xyz轴实现效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS3-%E8%BF%87%E6%B8%A1"><span class="toc-number"></span> <span class="toc-text">CSS3 过渡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS3-%E5%8A%A8%E7%94%BB"><span class="toc-number"></span> <span class="toc-text">CSS3 动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number"></span> <span class="toc-text"></span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/11/08/%E6%B5%8B%E8%AF%95%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F/" title="测试自动化部署是否成功"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="测试自动化部署是否成功"/></a><div class="content"><a class="title" href="/2022/11/08/%E6%B5%8B%E8%AF%95%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F/" title="测试自动化部署是否成功">测试自动化部署是否成功</a><time datetime="2022-11-08T14:36:36.000Z" title="发表于 2022-11-08 14:36:36">2022-11-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/03/20/Windows%E4%B8%AD%E4%B8%80%E6%AC%BE%E8%83%BD%E6%8F%90%E5%8D%87%E4%BD%A0%E6%95%88%E7%8E%87%E7%9A%84%E5%B7%A5%E5%85%B7/" title="Windows中一款能提升你效率的工具"><img src="https://dali-saymore-public.oss-cn-shanghai.aliyuncs.com/wox.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Windows中一款能提升你效率的工具"/></a><div class="content"><a class="title" href="/2019/03/20/Windows%E4%B8%AD%E4%B8%80%E6%AC%BE%E8%83%BD%E6%8F%90%E5%8D%87%E4%BD%A0%E6%95%88%E7%8E%87%E7%9A%84%E5%B7%A5%E5%85%B7/" title="Windows中一款能提升你效率的工具">Windows中一款能提升你效率的工具</a><time datetime="2019-03-20T15:20:39.000Z" title="发表于 2019-03-20 15:20:39">2019-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/08/25/%E8%81%8A%E8%81%8AJS%E5%8A%A8%E7%94%BB%E5%BA%93-Velocity-js/" title="聊聊JS动画库:Velocity.js"><img src="https://www.theengineeringprojects.com/wp-content/uploads/2021/05/what-is-velocity.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="聊聊JS动画库:Velocity.js"/></a><div class="content"><a class="title" href="/2017/08/25/%E8%81%8A%E8%81%8AJS%E5%8A%A8%E7%94%BB%E5%BA%93-Velocity-js/" title="聊聊JS动画库:Velocity.js">聊聊JS动画库:Velocity.js</a><time datetime="2017-08-25T08:37:31.000Z" title="发表于 2017-08-25 08:37:31">2017-08-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/08/15/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/" title="python数据分析入门教学"><img src="https://i.ytimg.com/vi/WwqumCgyq7E/maxresdefault.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python数据分析入门教学"/></a><div class="content"><a class="title" href="/2017/08/15/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/" title="python数据分析入门教学">python数据分析入门教学</a><time datetime="2017-08-15T11:37:13.000Z" title="发表于 2017-08-15 11:37:13">2017-08-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/08/13/git%E4%B8%8Egithub%E7%9A%84%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/" title="git与github的正确使用姿势"><img src="https://edupala.com/wp-content/uploads/2018/05/git.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git与github的正确使用姿势"/></a><div class="content"><a class="title" href="/2017/08/13/git%E4%B8%8Egithub%E7%9A%84%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/" title="git与github的正确使用姿势">git与github的正确使用姿势</a><time datetime="2017-08-13T11:37:48.000Z" title="发表于 2017-08-13 11:37:48">2017-08-13</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By laoxue</div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div></div></body></html>
